@@ -1,6 +1,0 @@
-[submodule "AnalyzeMovementData/pupil-analysis"]
-	path = AnalyzeMovementData/pupil-analysis
-	url = https://github.com/jkemppainen/pupil-analysis
-[submodule "AnalyzeMovementData/movemeter"]
-	path = AnalyzeMovementData/movemeter
-	url = https://github.com/jkemppainen/movemeter
