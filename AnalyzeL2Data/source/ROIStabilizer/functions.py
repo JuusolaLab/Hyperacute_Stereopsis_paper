@@ -101,8 +101,8 @@ def stab_frame(frame_piece, old_piece, lk_params,x1,x2,y1,y2,old_tx,old_ty,out_t
 	
 	return {'img':img, 'img2':img2, 'old_tx':old_tx,'old_ty':old_ty}
 	
-def stab_video(x1,x2,y1,y2,neuron,rois,method = 'frame_to_frame',window_frac = 1,time_frame0 = 0,num_frame0 = 0):
-	frames = vr.get_frames(neuron,crop=[0,1,0,1,0.25,0.6])
+def stab_video(x1,x2,y1,y2,neuron,rois,method = 'frame_to_frame',window_frac = 1,time_frame0 = 0,num_frame0 = 0,crop=[0,1,0,1,0.25,0.6]):
+	frames = vr.get_frames(neuron,crop)
 	time_video = vr.get_time_video(rois,neuron)
 	if rois is None:
 		file = open('.'.join(neuron.split('.')[0:-1])+'.txt','w') 

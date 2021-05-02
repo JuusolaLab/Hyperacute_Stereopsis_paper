@@ -38,10 +38,11 @@ root.withdraw()
 
 print('neuron: ',neuron.split('/')[-1].split('.')[0])
 print('rois: ',rois)
-#stab_video(0,0,0,0,neuron,rois,method = 'from_timeframe0', window_frac = 0, time_frame0 = 27)
-#stab_video(0,0,0,0,neuron,rois,method = 'from_numframe0', window_frac = 0, num_frame0 = 374)
-stab_video(0,0,0,0,neuron,rois,method = 'from_maxframe', window_frac = 0)
-#stab_video(0,0,0,0,neuron,rois,method = 'frame_to_frame', window_frac = 0)
+crop=[0,1,0,1,0.25,0.6]
+#stab_video(0,0,0,0,neuron,rois,method = 'from_timeframe0', window_frac = 0, time_frame0 = 27,crop=crop)
+#stab_video(0,0,0,0,neuron,rois,method = 'from_numframe0', window_frac = 0, num_frame0 = 374,crop=crop)
+stab_video(0,0,0,0,neuron,rois,method = 'from_maxframe', window_frac = 0,crop=crop)
+#stab_video(0,0,0,0,neuron,rois,method = 'frame_to_frame', window_frac = 0,crop=crop)
 
 #select ROI
 #frame = max_frame(get_frames(filename))['frame']
