@@ -9,4 +9,4 @@
 ## How to use
 - Make sure the right paths are written at the #PATH section of the common.py file
 - Download the Stimuli.7z file and extract on the relevant path (that you chose in the common.py file)
-- Run dyna_grating.py (Play with the #CONSTANT section parameters to adjust the model)
+- Run dyna_gratings.py (Play with the #CONSTANT section parameters to adjust the model)
