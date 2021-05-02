@@ -1,5 +1,5 @@
 #
-# This script fetches the latest Pseudopupil analysis suite
+# This script fetches the latest Gonometric analysis suite
 # from PyPi and Github and creates few README.md pages
 #
 
@@ -22,7 +22,7 @@ datenow=$(date)
 # wget https://github.com/jkemppainen/$pkg/archive/master.zip
 # mv master.zip $pkg.zip
 # 
-# pkg=pupil-analysis
+# pkg=gonio-analysis
 # 
 # wget https://github.com/jkemppainen/$pkg/archive/master.zip
 # mv master.zip $pkg.zip
@@ -42,7 +42,7 @@ datenow=$(date)
 # 
 # The zip files here contain the project full sources fetched from Github on $datenow.
 # 
-# * $(zipgrep "__version__ = " pupil-analysis.zip)
+# * $(zipgrep "__version__ = " gonio-analysis.zip)
 # * $(zipgrep "__version__ = " movemeter.zip)
 # * $(zipgrep "__version__ = " tk_steroids.zip)
 # * $(zipgrep "__version__ = " roimarker.zip)
@@ -54,7 +54,7 @@ datenow=$(date)
 mkdir wheels
 cd wheels
 # 
-pip download --no-deps pupil-analysis
+pip download --no-deps gonio-analysis
 pip download --no-deps movemeter
 pip download --no-deps tk-steroids
 pip download --no-deps roimarker
@@ -100,7 +100,7 @@ analysis suite used in the
 
 It consist of two parts
 * **movemeter** - To analyse the X-ray microsaccade data
-* **pupil-analysis** - To analyse the deep pseudopupil microsaccades and the rhabdomere orientation
+* **gonio-analysis** - To analyse the deep pseudopupil microsaccades and the rhabdomere orientation
 
 In addition to *movemeter*, we also used our MATLAB based implementation for motion analysis (*xraymovement2.m*).
 
@@ -114,7 +114,7 @@ Select one of the following methods.
 For Windows, all-in-one installer is provided in
 [Releases](https://github.com/JuusolaLab/Hyperacute_Stereopsis_paper/releases).
 
-1) Download and run *Pupil_Analysis_0.X.Y.exe*
+1) Download and run *Gonio_Analysis_0.X.Y.exe*
 2) Launch icons appear in the Windows Start menu after
 
 Different versions can coexist side-by-side. Use Windows *Apps & features* to uninstall.
@@ -127,7 +127,7 @@ Internet connection not required.
 versions as provided here, and installing is simple
 
 $(printf '```')
-pip install pupil-analysis
+pip install gonio-analysis
 $(printf '```')
 
 
@@ -145,12 +145,12 @@ $(printf '```')
 
 ## Launching
 
-After the Windows installer, launch icons *Movemeter* and *Pupil Analysis* appear in the Start menu.
+After the Windows installer, launch icons *Movemeter* and *Gonio Analysis* appear in the Start menu.
 
 For other installation methods
 
 $(printf '```python')
-python -m pupilanalysis.tkgui
+python -m gonioanalysis.tkgui
 $(printf '```')
 
 and
@@ -164,7 +164,7 @@ $(printf '```')
 
 Problems can be reported
 [here](https://github.com/JuusolaLab/Hyperacute_Stereopsis_paper/issues)
-or on the repositories of the individual projects (movemeter, pupilanalysis).
+or on the repositories of the individual projects (movemeter, gonioanalysis).
 Pull requests are welcomed!
 
 EOM
