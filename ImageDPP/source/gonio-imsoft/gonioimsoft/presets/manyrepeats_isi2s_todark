@@ -1,0 +1,1 @@
+{"isi": 2.0, "repeats": 25, "pre_stim": 0.0, "stim": 0.2, "post_stim": 0.0, "frame_length": 0.01, "ir_imaging": 5, "ir_waiting": 0, "ir_livefeed": 1, "flash_on": 0.0, "flash_off": 2.0, "ir_channel": "Dev1/ao1", "flash_channel": "Dev1/ao0", "suffix": "manyrepeats_isi2s_todark", "trigger_channel": "Dev2/ao3"}
