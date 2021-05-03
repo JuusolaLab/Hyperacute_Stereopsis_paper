@@ -8,6 +8,7 @@ It is made of 3 parts:
 - Dynamic grating stimulus
 - Last resolvable angle
 - ROI stabilizer
+
 Go to the corresponding subfolder to read the readme instructions.
 
 
