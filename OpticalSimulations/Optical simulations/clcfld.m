@@ -1,0 +1,33 @@
+function Efi=clcfld(n1,n2,N,V,r,a)
+%formulae van Etten, p. 80-81, Efi
+%the radial dependence of the rotationally invariant modal field
+Vq=V^2;
+Nq=N^2;
+n1q=n1^2;
+n2q=n2^2;
+p=n2q/n1q;
+Aq=Vq/(n1q-n2q);
+A=Aq^0.5;   %2*pi*a/lambda
+uq=Aq*(n1q-Nq);
+wq=Aq*(Nq-n2q);
+u=uq^0.5;
+w=wq^0.5;
+R1=besselj(1,u)/besselk(1,w);
+J1=besselj(1,u);
+J0=besselj(0,u);
+Y1=J0/(u*J1)-1/uq;
+K0=besselk(0,w);
+K1=besselk(1,w);
+X1=-K0/(w*K1)-1/wq;
+R2=-(1/uq+1/wq)/(Y1+X1);
+%R3=(Vq/(uq*(1-p))-1)^0.5;
+R3=A*N/u;
+R4=R3*u/w;
+h1=u/a;
+h2=w/a;
+M=fix(a/(r(2)-r(1)))+1;
+h1r=h1*r(1:M);
+Efi=R3*((1-R2)*besselj(1,h1r)./h1r+R2*besselj(0,h1r));
+h2r=h2*r(M+1:size(r,2));
+Efi2=-R1*R4*((1-R2)*besselk(1,h2r)./h2r-R2*besselk(0,h2r));
+Efi=[Efi Efi2]/Efi(1);
