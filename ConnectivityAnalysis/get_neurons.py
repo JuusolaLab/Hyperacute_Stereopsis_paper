@@ -5,11 +5,9 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
 
-TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbWNtYW51czFAc2hlZmZpZWxkLmFjLnVrIiwibGV2ZWwiOiJub2F1dGgiLCJpbWFnZS11cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vLV9VbXJGaVZlRXZVL0FBQUFBQUFBQUFJL0FBQUFBQUFBQUFBL0FNWnV1Y21mSWU5V3ZScm9uQy1ZUUU0ZGRrOFhWZklUdGcvcGhvdG8uanBnP3N6PTUwP3N6PTUwIiwiZXhwIjoxNzcyNDgyNjIwfQ.18JDKwt_yLehRIESw-2PZHbt6Ml_7xiUH-6d6EgsY1E'
+TOKEN = ''
 c = Client('neuprint.janelia.org', dataset='hemibrain:v1.1', token=TOKEN)
-
-gamma_csv = r"C:\Users\James\OneDrive\Sheffield\Python\Neuprint\KCgd.csv"
-lc14_csv = "/home/james/OneDrive/Sheffield/Python/Neuprint/LC14.csv"
+"
 
 def get_body_id_from_csv(csv_name):
     neuron_df = pd.read_csv(csv_name)
