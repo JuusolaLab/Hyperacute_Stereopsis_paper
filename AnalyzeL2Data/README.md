@@ -1,4 +1,4 @@
-# Dynamic grating responses analysis
+# L2 Data analysis
 
 This subrepository contains the Python based dynamic grating
 analysis suite used in the
